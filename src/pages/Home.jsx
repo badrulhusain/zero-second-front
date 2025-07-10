@@ -7,7 +7,7 @@ function Home() {
   const [marks, setMarks] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/candidates')
+    axios.get('https://zero-second-back.onrender.com/candidates')
       .then(res => {
         setCandidates(res.data);
         setMarks(res.data.map(c => ({
